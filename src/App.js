@@ -1,6 +1,7 @@
 import './App.css';
 import {useState} from "react";
 import "milligram";
+import MovieForm from "./MovieForm";
 
 function App() {
     const [title, setTitle] = useState('');

@@ -2,6 +2,23 @@ import './App.css';
 import {useState} from "react";
 import "milligram";
 import MovieForm from "./MovieForm";
+import MoviesList from "./MoviesList";
+
+
+function App() {
+    const [movies, setMovies] = useState([]);
+    
+ 
+    return (
+         <div>
+            <h1>My favourite movies to watch</h1>
+            <MoviesList movies={movies}/>
+            <MovieForm onMovieSubmit={(movie) => setMovies([...movies, movie])}/>
+         </div>
+    );
+ }
+
+/*
 
 function App() {
     const [title, setTitle] = useState('');
@@ -50,6 +67,5 @@ function App() {
         </div>
     );
 }
-
+*/
 export default App;
-
